@@ -1,0 +1,21 @@
+Penetration Testing of bWAPP Using OWASP ZAP
+
+    As part of our ongoing efforts to strengthen the security of our web applications, we conducted a thorough penetration testing exercise on bWAPP (Buggy Web Application) using OWASP ZAP (Zed Attack Proxy). This approach aimed to identify and mitigate potential vulnerabilities such as XSS (Cross-Site Scripting), SQLi (SQL Injection), and broken authentication.
+
+Automated Scans with OWASP ZAP:
+    Firstly, we configured OWASP ZAP to target our bWAPP instance. The automated scan was initiated using OWASP's recommended scan policies, focusing on the OWASP Top 10 vulnerabilities. This automated approach allowed us to efficiently scan the application for common security weaknesses.
+
+Manual Testing and Verification:
+    In addition to automated scans, we performed extensive manual testing. This included injecting XSS payloads into input fields to test for script injection vulnerabilities. We also conducted SQL Injection tests by manipulating input parameters to detect any weaknesses in SQL query handling.
+
+Identifying Broken Authentication:
+    Our manual testing extended to evaluating the application's authentication mechanisms. We reviewed password policies for weaknesses and tested for common authentication flaws, ensuring that session management was securely implemented.
+
+Documentation and Reporting:
+    Throughout the testing process, detailed documentation was maintained. We recorded all findings, including vulnerability types, locations within the application, and steps taken to reproduce them. Screenshots and videos were included to illustrate critical findings effectively.
+
+Actionable Recommendations:
+    Based on our findings, we prioritized vulnerabilities according to their severity and potential impact on the application's security. A comprehensive report was compiled, outlining each vulnerability with a risk assessment and actionable recommendations for mitigation.
+
+Continued Security Enhancement:
+    Following the penetration testing, we collaborated closely with our development team to address identified vulnerabilities promptly. Regular testing and continuous improvement of our security measures are integral to safeguarding our applications against evolving threats. This exercise not only validated the effectiveness of our current security controls but also provided valuable insights for enhancing our overall security posture. By proactively testing and mitigating vulnerabilities, we aim to maintain a robust defense against potential security risks.
