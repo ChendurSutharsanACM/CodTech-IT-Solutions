@@ -1,0 +1,64 @@
+This scenario explains a blue team (defenders using Wazuh) versus red team (attackers using Hydra) exercise.
+
+Blue Team (Using Wazuh)
+
+Step-by-Step Approach:
+
+1. Setup and Configuration:
+   - Ensure Wazuh manager and agents are installed and properly configured across your network.
+   - Review and update Wazuh rules related to login attempts, specifically focusing on brute-force attack patterns.
+
+2. Real-Time Monitoring:
+   - Use Wazuh’s dashboard or command-line interface to monitor incoming logs and alerts in real-time.
+   - Set up alerts for suspicious login activities, such as multiple failed login attempts from the same IP address.
+
+3. Detection and Alerting:
+   - Configure Wazuh to detect patterns indicative of brute-force attacks (e.g., multiple failed login attempts within a short period).
+   - Ensure alerts are configured to notify security personnel promptly.
+
+4. Incident Response:
+   - Upon receiving alerts, investigate the source IP address and targeted usernames involved in the brute-force attempt.
+   - Determine if the attack is ongoing and assess its impact.
+
+5. Response and Mitigation:
+   - Depending on your organization’s policies, consider responses such as:
+     - Temporarily blocking the attacking IP address.
+     - Implementing rate limiting or CAPTCHA challenges.
+     - Reviewing and enhancing password policies and authentication mechanisms.
+
+6. Post-Incident Analysis:
+   - Conduct a thorough analysis of the attack to understand how it was detected and any potential gaps in defenses.
+   - Update Wazuh rules and configurations based on insights gained from the attack simulation.
+
+Red Team (Using Hydra for Brute-Force Attack)
+
+Attack Simulation:
+
+1. Select Target:
+   - Choose a specific service to target (e.g., SSH, FTP, web application login).
+
+2. Prepare Attack:
+   - Use Hydra to launch a brute-force attack against the chosen service.
+   - Specify a list of usernames and passwords to attempt.
+
+3. Execute Attack:
+   - Run Hydra with appropriate parameters against the target service:
+     
+     hydra -t 4 -l srj -P passwordfile.txt 192.168.43.173 ssh
+
+4. Monitor Attack Progress:
+   - Observe Hydra's output to track login attempts and whether any credentials are successfully compromised.
+
+5. Adapt Tactics:
+   - Adjust attack parameters based on responses from the blue team.
+
+6. Document Findings:
+   - Record the effectiveness of the attack, including successful compromises and detection evasion tactics used.
+
+Key Takeaways:
+
+- Learning Opportunity: This exercise provides valuable insights into both defensive and offensive security techniques.
+- Improvement: Regularly update and refine Wazuh rules and response procedures based on simulated and real-world attack data.
+- Team Collaboration: Encourage communication between blue and red teams to enhance overall security posture and incident response readiness.
+
+By simulating such scenarios regularly, organizations can better prepare for real-world cyber threats and improve their overall security resilience.
